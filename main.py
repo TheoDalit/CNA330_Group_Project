@@ -57,6 +57,6 @@ df2['Average viewer ratio'] = df2['Average viewer ratio'].astype(float)
 df2['Followers gained'] = df2['Followers gained'].astype(float)
 df2['Views gained'] = df2['Views gained'].astype(float)
 
-df.to_sql('7d', engine, if_exists = 'append')
-df1.to_sql('30d', engine, if_exists = 'append')
-df2.to_sql('90d', engine, if_exists = 'append')
+df.to_sql('7d', engine, if_exists = 'replace', index=False) # Writes to the database
+df1.to_sql('30d', engine, if_exists = 'replace', index=False)
+df2.to_sql('90d', engine, if_exists = 'replace', index=False)

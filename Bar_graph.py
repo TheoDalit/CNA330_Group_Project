@@ -19,18 +19,18 @@ plt.bar(df2['Game'], df2['Watch time'], width=0.3, align='edge', label='Watch ti
 plt.bar(df2['Game'], df1['Watch time'], width=0.2, align='center', label='Watch time (30 days)')
 plt.bar(df2['Game'], df['Watch time'], width=-0.2, align='edge', label='Watch time (7 days)')
 
-plt.title('Most watched games on Twitch in the past 90 days')
+plt.title('Most watched games on Twitch in the past 90 days') # Title, labels, and axis formatting
 plt.xlabel('Game')
 plt.ylabel('Watch time (hours)')
 plt.xticks(rotation=-45, ha='left')
 plt.yscale('log')
 plt.grid(axis='y')
+plt.legend()
+plt.tight_layout()
 
-formatter = matplotlib.ticker.ScalarFormatter() # https://stackoverflow.com/questions/61449706/change-y-axis-tick-scale-with-log-bar-graph-python
+formatter = matplotlib.ticker.ScalarFormatter() # Format for the y-axis so it isn't in scientific notation https://stackoverflow.com/questions/61449706/change-y-axis-tick-scale-with-log-bar-graph-python
 formatter.set_powerlimits((0,15))
 plt.gca().yaxis.set_major_formatter(formatter)
 plt.gca().yaxis.set_minor_locator(matplotlib.ticker.NullLocator())
 
-plt.legend()
-plt.tight_layout()
 plt.show()

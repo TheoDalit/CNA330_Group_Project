@@ -1,2 +1,2 @@
 # CNA330_Group_Project
- This project is based off the most watched games on Twitch.tv from the past 90, 30, and 7 days.
+ This project is based off the most watched games on Twitch.tv from the past 90, 30, and 7 days. This project uses pandas to pull from CSV files and creates databases from it. The database is then used to graph a bar graph comparing the peak viewers from the most watched games on Twitch.tv in the past 90, 30, and 7 days. The CSV files are datasets taken from https://sullygnome.com/games. 
